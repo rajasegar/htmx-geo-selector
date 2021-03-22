@@ -67,6 +67,14 @@ app.post('/country', async (req, res) => {
 
 });
 
+app.listen(PORT, (err) => {
+  if (err) {
+    fastify.log.error(err)
+    process.exit(1)
+  }
+})
+
+/*
 const start = async () => {
   try {
     await app.listen(PORT);
@@ -77,3 +85,4 @@ const start = async () => {
 }
 
 start();
+*/
