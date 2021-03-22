@@ -5,6 +5,8 @@ const axios = require('axios');
 const pug = require('pug');
 const R = require('ramda');
 
+const PORT = process.env.PORT || 3000;
+
 const app = fastify({logger: true });
 
 app.register(fastifyPug, { 
@@ -67,7 +69,7 @@ app.post('/country', async (req, res) => {
 
 const start = async () => {
   try {
-    await app.listen(3000);
+    await app.listen(PORT);
   } catch(err) {
     app.log.error(err);
     process.exit(1);
