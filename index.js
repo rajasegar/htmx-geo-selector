@@ -67,7 +67,7 @@ app.post('/country', async (req, res) => {
 
 });
 
-app.listen(PORT, (err) => {
+app.listen(PORT, '0.0.0.0', (err) => {
   if (err) {
     fastify.log.error(err)
     process.exit(1)
