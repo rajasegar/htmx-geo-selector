@@ -1,14 +1,22 @@
 extends layout
 block body
-  h1 Geo Selector
-  form
-    p
-      select(name="region", hx-post='/subregions', hx-target="#subregions")
-        option Africa
-        option Americas
-        option Asia
-        option Europe
-        option Oceania
-    p#subregions
-    p#countries
-    #country
+  .container
+    .row
+      .col-md-6.offset-md-3
+        .card.mt-5
+          h1.card-header.text-center Geo Selector
+          .card-body
+            form
+              .mb-3
+                select.form-select(name="region", hx-post='/subregions', hx-target="#subregions", hx-indicator=".htmx-indicator")
+                  option Africa
+                  option Americas
+                  option Asia
+                  option Europe
+                  option Oceania
+                  include loader
+              p#subregions
+              p#countries
+              #country
+              include loader
+      
