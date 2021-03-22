@@ -1,0 +1,25 @@
+{
+  "name": "htmx-geo-selector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "countryinfo": "^1.0.5",
+    "fastify": "^3.14.0",
+    "fastify-formbody": "^5.0.0",
+    "fastify-pug": "^2.0.0",
+    "ramda": "^0.27.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

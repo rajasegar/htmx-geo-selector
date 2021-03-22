@@ -1,0 +1,14 @@
+extends layout
+block body
+  h1 Geo Selector
+  form
+    p
+      select(name="region", hx-post='/subregions', hx-target="#subregions")
+        option Africa
+        option Americas
+        option Asia
+        option Europe
+        option Oceania
+    p#subregions
+    p#countries
+    #country

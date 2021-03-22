@@ -1,0 +1,3 @@
+select(name="code", hx-post="/country", hx-target="#country")
+  each country in countries
+    option(value=country.cca3) #{country.name.common}
