@@ -8,6 +8,7 @@ block body
           .card-body
             form
               .mb-3
+                label.form-label Select a Region:
                 select.form-select(name="region", hx-post='/subregions', hx-target="#subregions", hx-indicator=".htmx-indicator")
                   option Africa
                   option Americas

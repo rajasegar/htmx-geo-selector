@@ -1,3 +1,4 @@
+label.form-label Select a country:
 select.form-select(name="code", hx-post="/country", hx-target="#country", hx-indicator=".htmx-indicator")
   each country in countries
     option(value=country.cca3) #{country.name.common}

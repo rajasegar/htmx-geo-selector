@@ -1,5 +1,7 @@
-select.form-select(name="subregion", hx-post="/countries", hx-target="#countries", hx-indicator=".htmx-indicator")
-  each sr in subRegions
-    option= sr
+.mb-3
+  label.form-label Select a Sub-Region:
+  select.form-select(name="subregion", hx-post="/countries", hx-target="#countries", hx-indicator=".htmx-indicator")
+    each sr in subRegions
+      option= sr
 p#countries(hx-swap-oob="true")
 p#country(hx-swap-oob="true")
