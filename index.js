@@ -26,6 +26,7 @@ app.post('/subregions', async (req, res) => {
     const response = await axios.get(`https://restcountries.eu/rest/v2/region/${region}?fields=subregion`);
     const subRegions = R.uniq(response.data.map(r => r.subregion));
     const template = pug.compileFile('views/includes/sub-regions.pug');
+    subRegions.unshift('Select a Sub-Region...');
     res.send(template({ subRegions }));
 
   } catch(err)  {
@@ -41,6 +42,7 @@ app.post('/countries', async (req, res) => {
   try {
     const response = await axios.get(`https://restcountries.herokuapp.com/api/v1/subregion/${subregion}`);
     const countries = response.data;
+    countries.unshift({ name: { common: 'Select a Country' }, cca3: '' }); 
     const template = pug.compileFile('views/includes/countries.pug');
     res.send(template({ countries }));
 
